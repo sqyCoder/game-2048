@@ -1,0 +1,152 @@
+/* ============ 暗黑主题（spec §4.4，与 game-light.css 同构，仅换色值） ============ */
+
+.root {
+    -board-bg: #1a1c22;
+    -board-panel: #23262e;
+    -cell-bg: #2e3138;
+    -text-main: #e8e8e8;
+    -text-light: #f5f5f5;
+    -score-bg: #2e3138;
+    -button-bg: #3a3e4a;
+    -overlay-bg: rgba(26, 28, 34, 0.78);
+    -panel-bg: #23262e;
+    -tile-2-bg: #41444f;    -tile-2-text: #e8e8e8;
+    -tile-4-bg: #565a66;    -tile-4-text: #f5f5f5;
+    -tile-8-bg: #b07a3f;    -tile-8-text: #f5f5f5;
+    -tile-16-bg: #b0643a;   -tile-16-text: #f5f5f5;
+    -tile-32-bg: #b04936;   -tile-32-text: #f5f5f5;
+    -tile-64-bg: #b03a2c;   -tile-64-text: #f5f5f5;
+    -tile-128-bg: #b09a2e;  -tile-128-text: #1a1c22;
+    -tile-256-bg: #c2a81f;  -tile-256-text: #1a1c22;
+    -tile-512-bg: #d4b612;  -tile-512-text: #1a1c22;
+    -tile-1024-bg: #e6c400; -tile-1024-text: #1a1c22;
+    -tile-2048-bg: #f2cc0a; -tile-2048-text: #1a1c22;
+    -tile-super-bg: #e8e8e8; -tile-super-text: #1a1c22;
+}
+
+.root-pane {
+    -fx-background-color: -board-bg;
+}
+
+.app-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-main;
+}
+
+.score-box {
+    -fx-background-color: -score-bg;
+    -fx-background-radius: 6;
+    -fx-padding: 4 10 4 10;
+    -fx-min-width: 68;
+}
+
+.score-caption {
+    -fx-font-size: 11px;
+    -fx-text-fill: -text-light;
+}
+
+.score-value {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-light;
+}
+
+.hint-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: -text-main;
+}
+
+.app-button {
+    -fx-background-color: -button-bg;
+    -fx-text-fill: -text-light;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6;
+    -fx-padding: 6 12 6 12;
+    -fx-cursor: hand;
+}
+
+.app-button:hover {
+    -fx-background-color: derive(-button-bg, 12%);
+}
+
+.app-button:disabled {
+    -fx-opacity: 0.45;
+}
+
+.dpad-button {
+    -fx-font-size: 17px;
+    -fx-pref-width: 46px;
+    -fx-pref-height: 38px;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.board-area {
+    -fx-alignment: center;
+}
+
+.cell {
+    -fx-background-color: -cell-bg;
+    -fx-background-radius: 6;
+}
+
+.tile {
+    -fx-background-radius: 6;
+    -fx-alignment: center;
+}
+
+.tile-label {
+    -fx-font-weight: bold;
+    -fx-font-family: "System";
+}
+
+.tile-2     .tile-label { -fx-text-fill: -tile-2-text; }
+.tile-4     .tile-label { -fx-text-fill: -tile-4-text; }
+.tile-8     .tile-label { -fx-text-fill: -tile-8-text; }
+.tile-16    .tile-label { -fx-text-fill: -tile-16-text; }
+.tile-32    .tile-label { -fx-text-fill: -tile-32-text; }
+.tile-64    .tile-label { -fx-text-fill: -tile-64-text; }
+.tile-128   .tile-label { -fx-text-fill: -tile-128-text; }
+.tile-256   .tile-label { -fx-text-fill: -tile-256-text; }
+.tile-512   .tile-label { -fx-text-fill: -tile-512-text; }
+.tile-1024  .tile-label { -fx-text-fill: -tile-1024-text; }
+.tile-2048  .tile-label { -fx-text-fill: -tile-2048-text; }
+.tile-super .tile-label { -fx-text-fill: -tile-super-text; }
+
+.tile-2     { -fx-background-color: -tile-2-bg; }
+.tile-4     { -fx-background-color: -tile-4-bg; }
+.tile-8     { -fx-background-color: -tile-8-bg; }
+.tile-16    { -fx-background-color: -tile-16-bg; }
+.tile-32    { -fx-background-color: -tile-32-bg; }
+.tile-64    { -fx-background-color: -tile-64-bg; }
+.tile-128   { -fx-background-color: -tile-128-bg; }
+.tile-256   { -fx-background-color: -tile-256-bg; }
+.tile-512   { -fx-background-color: -tile-512-bg; }
+.tile-1024  { -fx-background-color: -tile-1024-bg; }
+.tile-2048  { -fx-background-color: -tile-2048-bg; }
+.tile-super { -fx-background-color: -tile-super-bg; }
+
+.overlay {
+    -fx-background-color: -overlay-bg;
+    -fx-alignment: center;
+}
+
+.panel-box {
+    -fx-background-color: -panel-bg;
+    -fx-background-radius: 8;
+    -fx-padding: 20 28 20 28;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0.2, 0, 3);
+}
+
+.panel-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-main;
+}
+
+.panel-box .label {
+    -fx-font-size: 15px;
+    -fx-text-fill: -text-main;
+}
